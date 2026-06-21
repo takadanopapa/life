@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="子育て">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5bb98c"/><stop offset="1" stop-color="#3a8a64"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#g)"/>
+  <text x="600" y="290" font-size="210" text-anchor="middle" dominant-baseline="central">🧸</text>
+  <text x="600" y="470" font-size="58" fill="#fff" text-anchor="middle" font-family="sans-serif" font-weight="700" opacity="0.96">子育て</text>
+  <text x="600" y="540" font-size="30" fill="#fff" text-anchor="middle" font-family="sans-serif" opacity="0.7">たかだのパパの日常blog</text>
+</svg>
