@@ -1,13 +1,20 @@
 source "https://rubygems.org"
 
-# GitHub Pages 互換でビルドするためのメタgem。
-# ローカルでプレビューしたい時だけ使います（Rubyが必要）。
-# GitHub 上での公開には Ruby のローカルインストールは不要です。
-gem "github-pages", group: :jekyll_plugins
+# Jekyll 本体（Ruby 3.4 対応の 4.x 系）
+gem "jekyll", "~> 4.4"
 
-# Windows / JRuby 向けの補助gem
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
-  gem "tzinfo-data"
+# 使用プラグイン
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
 end
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# Ruby 3.4 で標準gemから分離されたもの（ビルド環境向けに明示）
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
+
+# タイムゾーンデータ（Windows等でローカルプレビューする場合用）
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
