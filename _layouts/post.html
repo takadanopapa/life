@@ -8,6 +8,10 @@ layout: default
     <time class="post-date">{{ page.date | date: '%Y.%m.%d' }}</time>
   </div>
 
+  {% if page.affiliate %}
+  <p class="affiliate-note"><span class="pr-label">PR</span> この記事には広告・アフィリエイトリンクを含みます。</p>
+  {% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>
