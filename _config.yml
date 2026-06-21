@@ -19,16 +19,11 @@ timezone: Asia/Tokyo
 url: "https://takadanopapa.com"
 baseurl: ""
 
-# ===== テーマ・プラグイン（GitHub Pages 公式サポート分のみ）=====
-theme: minima
+# ===== プラグイン =====
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-minima:
-  skin: auto          # ライト/ダーク自動
-  social_links: []
 
 # ===== 投稿の既定値 =====
 defaults:
