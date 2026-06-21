@@ -1,0 +1,52 @@
+# ===== サイト基本設定 =====
+title: 馬場ログ
+tagline: 高田馬場アラフォーおやじの、ごはん・子育て・旅の毎日
+description: >-
+  高田馬場在住、アラフォー・子ども二人のおやじが、高田馬場や新宿区を中心に
+  ごはんを食べたり、子育てしたり、たまに旅に出たり。毎日のライフログを
+  Claude Code で自動化して残すブログです。
+author: 馬場パパ
+lang: ja
+timezone: Asia/Tokyo
+
+# ===== 公開URL（GitHub Pages 設定後に書き換え）=====
+# ユーザーページ（USERNAME.github.io というリポジトリ）の場合:
+#   url: "https://USERNAME.github.io"
+#   baseurl: ""
+# プロジェクトページ（例: takadanobaba-blog というリポジトリ）の場合:
+#   url: "https://USERNAME.github.io"
+#   baseurl: "/takadanobaba-blog"
+url: "https://takadanopapa.github.io"
+baseurl: "/life"
+
+# ===== テーマ・プラグイン（GitHub Pages 公式サポート分のみ）=====
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+minima:
+  skin: auto          # ライト/ダーク自動
+  social_links: []
+
+# ===== 投稿の既定値 =====
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+
+# ===== ビルド対象外 =====
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - WRITING_GUIDE.md
+  - AUTOMATION.md
+  - SETUP_GUIDE.md
+  - scripts/
+  - vendor/
+  - .github/
