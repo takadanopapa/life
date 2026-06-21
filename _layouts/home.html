@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap hero-inner">
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-tagline">{{ site.tagline }}</p>
+  </div>
+</section>
+
+<div class="wrap">
+  {% if content != "" %}
+  <section class="intro">
+    {{ content }}
+  </section>
+  {% endif %}
+
+  <h2 class="section-title">{{ page.list_title | default: '最近の投稿' }}</h2>
+
+  <div class="card-grid">
+    {% for post in site.posts %}
+    <a class="card" href="{{ post.url | relative_url }}">
+      {% if post.hero %}
+      <div class="card-thumb" style="background-image:url('{{ post.hero | relative_url }}')"></div>
+      {% else %}
+      <div class="card-thumb card-thumb--ph"></div>
+      {% endif %}
+      <div class="card-body">
+        {% if post.category %}<span class="cat-badge">{{ post.category }}</span>{% endif %}
+        <h3 class="card-title">{{ post.title }}</h3>
+        <time class="card-date">{{ post.date | date: '%Y.%m.%d' }}</time>
+        <p class="card-excerpt">{{ post.content | strip_html | strip_newlines | truncate: 80 }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
