@@ -259,6 +259,37 @@ a:hover { color: var(--accent-deep); }
 .page ul { padding-left: 1.2em; }
 .page li { margin: .4em 0; }
 
+/* ===== アフィリエイト・広告 ===== */
+.pr-label {
+  font-size: .68rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--muted);
+  border-radius: 4px;
+  padding: 1px 7px;
+  margin-right: 6px;
+  vertical-align: middle;
+  letter-spacing: .05em;
+}
+.affiliate-note {
+  display: inline-block;
+  font-size: .8rem;
+  color: var(--muted);
+  background: #f3efe9;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 0 0 14px;
+}
+/* 商品紹介を囲むボックス（もしも/ASPのリンクHTMLを中に貼る） */
+.affiliate-box {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin: 1.6em 0;
+  background: #fbf9f6;
+}
+.affiliate-box .ab-head { font-weight: 700; margin: 0 0 10px; }
+
 /* ===== お問い合わせフォーム ===== */
 .contact-form {
   display: flex;
