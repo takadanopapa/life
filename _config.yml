@@ -16,8 +16,8 @@ timezone: Asia/Tokyo
 # プロジェクトページ（例: takadanobaba-blog というリポジトリ）の場合:
 #   url: "https://USERNAME.github.io"
 #   baseurl: "/takadanobaba-blog"
-url: "https://takadanopapa.github.io"
-baseurl: "/life"
+url: "https://takadanopapa.com"
+baseurl: ""
 
 # ===== テーマ・プラグイン（GitHub Pages 公式サポート分のみ）=====
 theme: minima
