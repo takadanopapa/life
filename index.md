@@ -1,6 +1,5 @@
 ---
 layout: home
-title: ホーム
 list_title: 最近のライフログ
 ---
 
