@@ -12,10 +12,6 @@ images:
   - /assets/img/posts/2026-06-21-2348-ishigaki-hills/02.jpg
 ---
 
-<div class="post-hero">
-  <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name }}">
-</div>
-
 上の子の保育園で仲良くしている家族、何組かと一緒に石垣島へ。泊まったのは丘の上の一棟貸しヴィラ「石垣ヒルズ」のアウトドアヴィラです。家族旅行というより、いつもの仲間で大移動してきた感じの旅でした。
 
 ## 行ってみた感想
