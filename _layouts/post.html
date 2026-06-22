@@ -12,6 +12,12 @@ layout: default
   <p class="affiliate-note"><span class="pr-label">PR</span> この記事には広告・アフィリエイトリンクを含みます。</p>
   {% endif %}
 
+  {% if page.hero %}
+  <div class="post-hero" style="--hero: url('{{ page.hero | relative_url }}')">
+    <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name | default: page.title }}">
+  </div>
+  {% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>
