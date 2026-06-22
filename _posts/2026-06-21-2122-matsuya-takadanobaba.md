@@ -9,10 +9,6 @@ shop_name: 松屋 高田馬場店
 hero: /assets/img/placeholders/gohan.svg
 ---
 
-<div class="post-hero">
-  <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name }}">
-</div>
-
 夜、馬場をぶらついていて小腹が空いたとき、結局たどり着くのが松屋だったりします。高田馬場駅の早稲田口を出てすぐのところにある「松屋 高田馬場店」へ。24時間営業なので、時間を気にしなくていいのが何よりありがたい。
 
 ## 行ってみた感想
