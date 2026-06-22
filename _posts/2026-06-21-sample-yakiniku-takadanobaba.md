@@ -11,10 +11,6 @@ images:
   - /assets/img/posts/2026-06-21-sample/placeholder.svg
 ---
 
-<div class="post-hero">
-  <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name }}">
-</div>
-
 金曜の夜、子どもたちが「お肉食べたい！」と騒ぎ出したので、高田馬場駅から歩いてすぐの焼肉屋さんへ。
 （※これは仕組みの動作確認用サンプル記事です。実際にはメールで送った店名と写真をもとに、ここが自動で書かれます。）
 
