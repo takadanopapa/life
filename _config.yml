@@ -43,5 +43,6 @@ exclude:
   - AUTOMATION.md
   - SETUP_GUIDE.md
   - scripts/
+  - bulk/
   - vendor/
   - .github/
