@@ -11,10 +11,6 @@ images:
   - /assets/img/posts/2026-06-21-otoboke/01.jpg
 ---
 
-<div class="post-hero">
-  <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name }}">
-</div>
-
 馬場〜早稲田あたりをぶらついていたら小腹が空いて、前から気になっていた「キッチンオトボケ」へ。早稲田駅から歩いて3分ほど、馬場下町の交差点近くにある老舗の定食屋さんで、昔から早大生に愛されているお店です。
 
 ## 行ってみた感想
