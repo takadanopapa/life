@@ -205,15 +205,37 @@ a:hover { color: var(--accent-deep); }
 }
 
 /* 記事冒頭のメイン写真 */
-.post-hero img {
-  width: 100%;
-  height: auto;             /* 自然な縦横比で表示（切り抜かない） */
-  max-height: 70vh;         /* 縦長写真が画面を占有しすぎないよう上限だけ設定 */
-  object-fit: contain;      /* 枠に収める＝全体を見せる（cover は切り抜くので不可） */
-  background: var(--bg);    /* 余白はページ背景に馴染ませる */
+.post-hero {
+  position: relative;
+  overflow: hidden;
   border-radius: var(--radius);
   margin-bottom: 1em;
   box-shadow: var(--shadow);
+  background: var(--bg);
+}
+/* 背景に同じ写真をぼかして敷く（縦長でも余白が間延びしない） */
+.post-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero);
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px) brightness(.82) saturate(1.1);
+  transform: scale(1.18);   /* ぼかしの端が透けないよう少し拡大 */
+  z-index: 0;
+}
+/* 写真本体は切り抜かず全体を中央に表示 */
+.post-hero img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
 }
 
 /* 写真ギャラリー */
