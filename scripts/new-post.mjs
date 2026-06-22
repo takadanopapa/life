@@ -84,10 +84,7 @@ images:
 ${imagesYaml}
 ---
 
-<div class="post-hero">
-  <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name }}">
-</div>
-
+<!-- hero画像はレイアウト(_layouts/post.html)が front matter の hero から自動表示します -->
 <!-- 本文ここから（Claudeが執筆） -->
 
 ## 行ってみた感想
