@@ -379,4 +379,26 @@ a:hover { color: var(--accent-deep); }
 @media (max-width: 600px) {
   .hero { padding: 54px 0 60px; }
   .card-grid { grid-template-columns: 1fr; }
+
+  /* ヘッダー：狭い画面ではロゴとナビを縦に積んで中央寄せにし、
+     高さ固定をやめる。ナビ項目（特に「このブログについて」）は
+     途中で改行させない */
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 11px 0 9px;
+    gap: 7px;
+  }
+  .brand { font-size: 1.04rem; }
+  .site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0 24px;
+  }
+  .site-nav a {
+    margin-left: 0;
+    white-space: nowrap;
+  }
 }
