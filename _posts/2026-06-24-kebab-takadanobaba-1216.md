@@ -11,6 +11,7 @@ images:
   - /assets/img/posts/2026-06-24-kebab-takadanobaba-1216/01.jpg
   - /assets/img/posts/2026-06-24-kebab-takadanobaba-1216/02.jpg
   - /assets/img/posts/2026-06-24-kebab-takadanobaba-1216/03.jpg
+affiliate: true
 ---
 
 高田馬場をぶらついていたら、「KEBAB」の大きな看板を出したキッチンカーを発見。「PIKNIK KEBAB（ピクニックケバブ）」というお店で、ハラル対応のトルコ系メニューを出しているようです。こういう一期一会のキッチンカー、つい吸い寄せられてしまいます。
@@ -43,4 +44,18 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ 出店場所・日時・メニュー・価格などの最新情報は、お店の公式SNS等でご確認ください。
   </p>
+</div>
+
+<!-- affiliate-retrofit -->
+<div class="affiliate-shelf">
+  <p class="as-head">おうちでケバブ</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fniigata-shop%2F0542-001-01%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/niigata-shop/cabinet/item/0542/0542-001-01.jpg?_ex=300x300" alt="チキンケバブサンド（真空冷凍）4食入 FUNKY TURKEY【本格ケバブ/柔らかくジューシーな鶏肉/スパイシーな味わい/トルコ料理/ピタパン】【送料無料】 お中元" loading="lazy">
+      <span class="as-title">チキンケバブサンド（真空冷凍）4食入 FUNKY TURKEY【本格ケバブ/柔らかくジューシーな鶏肉/スパイシーな味わい/トルコ料理/ピタパン】【送料無料】 お中元</span>
+      <span class="as-price">¥3,600</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>
