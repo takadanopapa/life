@@ -313,6 +313,104 @@ a:hover { color: var(--accent-deep); }
   background: #fbf9f6;
 }
 .affiliate-box .ab-head { font-weight: 700; margin: 0 0 10px; }
+/* もしも経由・楽天のカード型リンク（affiliate.mjs link が生成） */
+.affiliate-box .ab-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.affiliate-box .ab-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.affiliate-box .ab-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.affiliate-box .ab-title {
+  font-size: .92rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.affiliate-box .ab-price { font-weight: 700; color: #bf0000; }
+.affiliate-box .ab-btn {
+  align-self: flex-start;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #fff;
+  background: #bf0000;
+  border-radius: 999px;
+  padding: 5px 16px;
+}
+.affiliate-box .ab-card:hover .ab-btn { opacity: .88; }
+
+/* 記事末の「関連商品」棚（affiliate.mjs shelf が生成） */
+.affiliate-shelf {
+  margin: 2.2em 0 1.2em;
+  padding-top: 1.4em;
+  border-top: 1px solid var(--line);
+}
+.affiliate-shelf .as-head {
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin: 0 0 14px;
+}
+.affiliate-shelf .as-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+.affiliate-shelf .as-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: #fbf9f6;
+}
+.affiliate-shelf .as-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.affiliate-shelf .as-title {
+  font-size: .82rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.affiliate-shelf .as-price { font-weight: 700; color: #bf0000; font-size: .9rem; }
+.affiliate-shelf .as-btn {
+  text-align: center;
+  font-size: .78rem;
+  font-weight: 700;
+  color: #fff;
+  background: #bf0000;
+  border-radius: 999px;
+  padding: 5px 10px;
+  margin-top: auto;
+}
+.affiliate-shelf .as-card:hover .as-btn { opacity: .88; }
 
 /* ===== お問い合わせフォーム ===== */
 .contact-form {
