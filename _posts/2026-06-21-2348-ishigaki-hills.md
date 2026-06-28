@@ -10,6 +10,7 @@ hero: /assets/img/posts/2026-06-21-2348-ishigaki-hills/01.jpg
 images:
   - /assets/img/posts/2026-06-21-2348-ishigaki-hills/01.jpg
   - /assets/img/posts/2026-06-21-2348-ishigaki-hills/02.jpg
+affiliate: true
 ---
 
 上の子の保育園で仲良くしている家族、何組かと一緒に石垣島へ。泊まったのは丘の上の一棟貸しヴィラ「石垣ヒルズ」のアウトドアヴィラです。家族旅行というより、いつもの仲間で大移動してきた感じの旅でした。
@@ -44,4 +45,32 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ 料金・空室・設備・BBQプランなどの最新情報は公式サイトでご確認ください。
   </p>
+</div>
+
+<!-- affiliate-retrofit -->
+<div class="affiliate-shelf">
+  <p class="as-head">石垣島で泊まるなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5659188&amp;p_id=55&amp;pc_id=55&amp;pl_id=624&amp;url=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F160779%2F160779.html" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://img.travel.rakuten.co.jp/share/HOTEL/160779/160779.jpg" alt="Ｔｈｅ　ＢＲＥＡＫＦＡＳＴ　ＨＯＴＥＬ　ＰＯＲＴＯ石垣島＜石垣島＞" loading="lazy">
+      <span class="as-title">Ｔｈｅ　ＢＲＥＡＫＦＡＳＴ　ＨＯＴＥＬ　ＰＯＲＴＯ石垣島＜石垣島＞</span>
+      <span class="as-price">1泊 ¥4,915〜</span>
+      <span class="as-btn">楽天トラベルで見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5659188&amp;p_id=55&amp;pc_id=55&amp;pl_id=624" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5659188&amp;p_id=55&amp;pc_id=55&amp;pl_id=624&amp;url=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F149092%2F149092.html" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://img.travel.rakuten.co.jp/share/HOTEL/149092/149092.jpg" alt="ホテルエメラルドアイル石垣島　＜石垣島＞" loading="lazy">
+      <span class="as-title">ホテルエメラルドアイル石垣島　＜石垣島＞</span>
+      <span class="as-price">1泊 ¥5,721〜</span>
+      <span class="as-btn">楽天トラベルで見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5659188&amp;p_id=55&amp;pc_id=55&amp;pl_id=624" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5659188&amp;p_id=55&amp;pc_id=55&amp;pl_id=624&amp;url=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F168549%2F168549.html" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://img.travel.rakuten.co.jp/share/HOTEL/168549/168549.jpg" alt="Ｔｈｅ　ＢＲＥＡＫＦＡＳＴ　ＨＯＴＥＬ　ＭＡＲＣＨＥ石垣島＜石垣島＞" loading="lazy">
+      <span class="as-title">Ｔｈｅ　ＢＲＥＡＫＦＡＳＴ　ＨＯＴＥＬ　ＭＡＲＣＨＥ石垣島＜石垣島＞</span>
+      <span class="as-price">1泊 ¥4,716〜</span>
+      <span class="as-btn">楽天トラベルで見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5659188&amp;p_id=55&amp;pc_id=55&amp;pl_id=624" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>
