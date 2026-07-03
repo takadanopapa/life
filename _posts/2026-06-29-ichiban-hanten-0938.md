@@ -10,6 +10,7 @@ hero: /assets/img/posts/2026-06-29-ichiban-hanten-0938/02.jpg
 images:
   - /assets/img/posts/2026-06-29-ichiban-hanten-0938/02.jpg
   - /assets/img/posts/2026-06-29-ichiban-hanten-0938/01.jpg
+affiliate: true
 ---
 
 高田馬場で古くから続く町中華、「一番飯店」でお昼を食べてきました。白い壁に「一番飯店 Since 1952」と大きく書かれた外観が目印で、隣はいつも作業でお世話になっている白井珈琲店。前を通るたびに気になっていたお店です。
@@ -40,4 +41,32 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ 営業時間・定休日・価格・評価などの最新情報は公式・各種グルメサイトでご確認ください。
   </p>
+</div>
+
+<!-- affiliate-retrofit -->
+<div class="affiliate-shelf">
+  <p class="as-head">おうちで町中華</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmanshuro%2F10000041%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/manshuro/cabinet/compass1594305163.jpg?_ex=300x300" alt="満州楼の中華丼　中華丼の具　中華丼の上だけ　五目あんかけ焼きそば　五目あん　湯煎10分　400g　からしそば　皿うどんの具　皿うどん　惣菜　中華丼　中華料理　簡単調理　中国料理　お取り寄せグルメ" loading="lazy">
+      <span class="as-title">満州楼の中華丼　中華丼の具　中華丼の上だけ　五目あんかけ焼きそば　五目あん　湯煎10分　400g　からしそば　皿うどんの具　皿うどん　惣菜　中華丼　中華料理　簡単調理　中国料理　お取り寄せグルメ</span>
+      <span class="as-price">¥648</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fdaigounagi%2Fcf-sha-001%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/daigounagi/cabinet/chinese/t_cf-sha-001_01r.jpg?_ex=300x300" alt="青山シャンウェイ 彩り野菜の中華丼 2種10食セット （塩味5食、醤油味5食） 中華丼の具 海鮮中華丼 中華丼の素 中華 惣菜 中国料理 丼の具 あんかけ焼きそばの具 五目あん 皿うどんの具 湯煎 冷凍 仕送り 簡単調理 お取り寄せ グルメ" loading="lazy">
+      <span class="as-title">青山シャンウェイ 彩り野菜の中華丼 2種10食セット （塩味5食、醤油味5食） 中華丼の具 海鮮中華丼 中華丼の素 中華 惣菜 中国料理 丼の具 あんかけ焼きそばの具 五目あん 皿うどんの具 湯煎 冷凍 仕送り 簡単調理 お取り寄せ グルメ</span>
+      <span class="as-price">¥4,980</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fgreen-house-foods%2F10000095%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/green-house-foods/cabinet/imgrc0093997796.jpg?_ex=300x300" alt="五目焼きそば 冷凍 あんかけ焼きそば 冷凍 やきそば 焼きそば湯煎 五目あん 冷凍食品 湯煎 焼きそばセット 冷凍焼きそば 麺類 餡かけ 五目あんかけ焼そば 上海 焼きそば 中国料理 中華料理 中華麺 中華食材 中華ギフト あんかけラーメン お取り寄せ" loading="lazy">
+      <span class="as-title">五目焼きそば 冷凍 あんかけ焼きそば 冷凍 やきそば 焼きそば湯煎 五目あん 冷凍食品 湯煎 焼きそばセット 冷凍焼きそば 麺類 餡かけ 五目あんかけ焼そば 上海 焼きそば 中国料理 中華料理 中華麺 中華食材 中華ギフト あんかけラーメン お取り寄せ</span>
+      <span class="as-price">¥1,398</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>
