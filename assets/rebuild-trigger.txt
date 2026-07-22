@@ -1,3 +1,3 @@
 Cloudflare Pages rebuild trigger.
-2026-07-22: 07-19/07-20 の4記事(sylvanian/azuchi/matsuri/shuminomori)が
-初回の連続コミットでビルドが取りこぼされたため、HEAD全体の再ビルドを強制する目的で追加。
+2026-07-22 run 2: 07-19/07-20 の4記事のうち3記事が本番デプロイに定着しないため、
+HEAD全体のクリーン再ビルドを再度強制する。
