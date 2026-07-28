@@ -12,8 +12,8 @@
 ```
 [スマホ] お店で写真を撮る
         │
-        ▼  ① 件名 [BLOG] 店名 ＋ 本文（カテゴリ/場所/メモ）＋ 写真添付 でメール送信
-[Gmail]  ラベル「blog」（フィルタで自動付与推奨）
+        ▼  ① 件名に店名、本文（カテゴリ/場所/メモ）＋ 写真添付 でメール送信
+[Gmail]  （ラベル・合言葉不要。goemonama@gmail.com → TO nozawa@beyonds.ai の全メールが対象）
         │
         ▼  ② GAS が15分おきに添付＋本文を Drive へ保存（scripts/gas/Code.gs）
 [Google ドライブ] BabaBlog-Inbox/<日付>_<店名>/  ← memo.txt, meta.json, 画像
@@ -54,8 +54,9 @@ GAS・Gmail・Drive すべて **nozawa@beyonds.ai** で統一（方式B）。
 ## メールの書き方（運用ルール）
 
 ```
-宛先: nozawa@beyonds.ai
-件名: [BLOG] 馬場焼肉ホルモン
+差出人: goemonama@gmail.com
+宛先(TO): nozawa@beyonds.ai
+件名: 馬場焼肉ホルモン     ← 原則「店名だけ」。合言葉は不要
 本文:
 カテゴリ: ごはん          ← ごはん / 子育て / 旅
 場所: 高田馬場
@@ -63,7 +64,10 @@ GAS・Gmail・Drive すべて **nozawa@beyonds.ai** で統一（方式B）。
 （写真は添付するだけ）
 ```
 
-- `[BLOG]` が目印（フィルタでラベル `blog` 自動付与を推奨）。
+- **判定は差出人＋宛先**。`goemonama@gmail.com` から `nozawa@beyonds.ai` 宛（TO）なら、件名に関係なく全件が対象
+  （`Code.gs` の `FROM_ADDRESS` / `TO_ADDRESS` で変更可）。
+- **件名は原則「店名だけ」**。日付が混ざっても自動で切り離して訪問日として使う（`7/22 てけてけ` などOK）。
+- ブログにしたくないメールは、件名に `非公開` / `skip` / `スキップ` / `ブログ不要` を入れると対象外（`SKIP_WORDS`）。
 - `カテゴリ` `場所` `メモ` は任意。あると記事の精度が上がる。
 
 ---
@@ -91,6 +95,13 @@ BabaBlog-Inbox/
    3. `WRITING_GUIDE.md` を読み、Web検索で店情報を裏取り（不確かなら書かない）。
    4. `node scripts/new-post.mjs --title ... --slug ... --category ... --shop ... --images "<一時パス,...>"` で枠＋画像を作成。
    5. 生成された `_posts/*.md` の本文をペルソナで執筆・上書き。
+   6. **アフィリエイト（もしも経由・楽天／積極）** ※WRITING_GUIDE「アフィリエイトの入れ方」に従う。
+      - 対象は**全カテゴリ**（子育て/旅/ごはん）。本文に明確な言及が無くても**テーマから関連商品を推測**可。無関係は不可。
+      - 物販（楽天市場）：`search` → `link`（本文）／`shelf`（記事末）。
+      - 宿（旅カテゴリ・楽天トラベル）：`hotel-search` → `hotel-link`（本文）／`hotel-shelf`（記事末）。
+      - 本文挿入は言及段落直後/まとめ前、棚は記事末。旅は宿＋旅行グッズの混在可。
+      - **本文＋末棚の合計は最大3個**（max_per_article）。`affiliate: true` を付与。
+      - 検索0件 / 生成失敗 の分はスキップ。両方作れなければ通常投稿（`affiliate:true`も付けない）。
 4. `git add -A && git commit -m "post: <店名> (<日付>)" && git push`
 5. 公開できたフォルダに `published.txt`（公開URL等を記載）を作成（二重投稿防止）。
 
