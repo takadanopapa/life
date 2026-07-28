@@ -17,9 +17,78 @@ layout: default
 
   <h2 class="section-title">{{ page.list_title | default: '最近の投稿' }}</h2>
 
-  <div class="card-grid">
+  {%- comment -%} カテゴリ・年・年月の一覧を投稿から組み立てる {%- endcomment -%}
+  {%- assign catlist = "" -%}
+  {%- assign ymlist = "" -%}
+  {%- assign yearlist = "" -%}
+  {%- for post in site.posts -%}
+    {%- if post.category and post.category != "" -%}
+      {%- unless catlist contains post.category -%}
+        {%- assign catlist = catlist | append: post.category | append: "|" -%}
+      {%- endunless -%}
+    {%- endif -%}
+    {%- assign ym = post.date | date: "%Y-%m" -%}
+    {%- unless ymlist contains ym -%}
+      {%- assign ymlist = ymlist | append: ym | append: "|" -%}
+    {%- endunless -%}
+    {%- assign y = post.date | date: "%Y" -%}
+    {%- unless yearlist contains y -%}
+      {%- assign yearlist = yearlist | append: y | append: "|" -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- assign cats = catlist | split: "|" -%}
+  {%- assign yms = ymlist | split: "|" -%}
+  {%- assign years = yearlist | split: "|" -%}
+
+  <div class="filters" id="filters" hidden>
+    <div class="filter-row">
+      <span class="filter-label">ジャンル</span>
+      <div class="chips" id="cat-chips">
+        <button type="button" class="chip is-on" data-cat="">すべて<span class="chip-n">{{ site.posts | size }}</span></button>
+        {%- for c in cats -%}
+        {%- assign n = 0 -%}
+        {%- for post in site.posts -%}{%- if post.category == c -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+        <button type="button" class="chip" data-cat="{{ c }}">{{ c }}<span class="chip-n">{{ n }}</span></button>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <span class="filter-label">時期</span>
+      <select id="ym-select" class="filter-select" aria-label="年月でしぼりこむ">
+        <option value="">すべての期間</option>
+        {%- for y in years -%}
+        <optgroup label="{{ y }}年">
+          <option value="{{ y }}">{{ y }}年すべて</option>
+          {%- for ym in yms -%}
+            {%- assign ymy = ym | split: "-" | first -%}
+            {%- if ymy == y -%}
+              {%- assign m = ym | split: "-" | last | plus: 0 -%}
+              <option value="{{ ym }}">{{ y }}年{{ m }}月</option>
+            {%- endif -%}
+          {%- endfor -%}
+        </optgroup>
+        {%- endfor -%}
+      </select>
+
+      <span class="filter-label">並び順</span>
+      <select id="sort-select" class="filter-select" aria-label="並び順">
+        <option value="new">新しい順</option>
+        <option value="old">古い順</option>
+      </select>
+
+      <button type="button" class="filter-reset" id="filter-reset" hidden>リセット</button>
+    </div>
+
+    <p class="filter-count" id="filter-count" aria-live="polite"></p>
+  </div>
+
+  <div class="card-grid" id="post-grid">
     {% for post in site.posts %}
-    <a class="card" href="{{ post.url | relative_url }}">
+    <a class="card" href="{{ post.url | relative_url }}"
+       data-cat="{{ post.category }}"
+       data-ym="{{ post.date | date: '%Y-%m' }}"
+       data-date="{{ post.date | date: '%Y%m%d%H%M' }}">
       {% if post.hero %}
       <div class="card-thumb" style="background-image:url('{{ post.hero | relative_url }}')"></div>
       {% else %}
@@ -34,4 +103,123 @@ layout: default
     </a>
     {% endfor %}
   </div>
+
+  <p class="filter-empty" id="filter-empty" hidden>この条件の記事はまだありません。</p>
 </div>
+
+<script>
+(function () {
+  var grid = document.getElementById('post-grid');
+  var filters = document.getElementById('filters');
+  if (!grid || !filters) return;
+
+  // JS が動く環境でだけ操作UIを出す（動かない場合は従来どおり全件表示）
+  filters.hidden = false;
+
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+  var chipBox = document.getElementById('cat-chips');
+  var ymSel = document.getElementById('ym-select');
+  var sortSel = document.getElementById('sort-select');
+  var countEl = document.getElementById('filter-count');
+  var emptyEl = document.getElementById('filter-empty');
+  var resetBtn = document.getElementById('filter-reset');
+
+  var state = { cat: '', ym: '', sort: 'new' };
+
+  function readHash() {
+    var h = (location.hash || '').replace(/^#/, '');
+    if (!h) return;
+    h.split('&').forEach(function (pair) {
+      var kv = pair.split('=');
+      var k = decodeURIComponent(kv[0] || '');
+      var v = decodeURIComponent(kv[1] || '');
+      if (k === 'cat') state.cat = v;
+      else if (k === 'ym') state.ym = v;
+      else if (k === 'sort' && (v === 'new' || v === 'old')) state.sort = v;
+    });
+  }
+
+  function writeHash() {
+    var parts = [];
+    if (state.cat) parts.push('cat=' + encodeURIComponent(state.cat));
+    if (state.ym) parts.push('ym=' + encodeURIComponent(state.ym));
+    if (state.sort !== 'new') parts.push('sort=' + state.sort);
+    var h = parts.join('&');
+    history.replaceState(null, '', location.pathname + location.search + (h ? '#' + h : ''));
+  }
+
+  function syncControls() {
+    Array.prototype.forEach.call(chipBox.querySelectorAll('.chip'), function (b) {
+      var on = (b.getAttribute('data-cat') || '') === state.cat;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if (ymSel.value !== state.ym) ymSel.value = state.ym;
+    sortSel.value = state.sort;
+  }
+
+  function matches(card) {
+    if (state.cat && (card.getAttribute('data-cat') || '') !== state.cat) return false;
+    if (state.ym) {
+      var ym = card.getAttribute('data-ym') || '';
+      // 値が「2026」ならその年すべて、「2026-07」ならその月だけ
+      if (state.ym.length === 4) {
+        if (ym.slice(0, 4) !== state.ym) return false;
+      } else if (ym !== state.ym) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (card) {
+      var ok = matches(card);
+      card.hidden = !ok;
+      if (ok) shown++;
+    });
+
+    var order = cards.slice().sort(function (a, b) {
+      var da = a.getAttribute('data-date') || '';
+      var db = b.getAttribute('data-date') || '';
+      if (da === db) return 0;
+      return state.sort === 'old' ? (da < db ? -1 : 1) : (da > db ? -1 : 1);
+    });
+    var frag = document.createDocumentFragment();
+    order.forEach(function (c) { frag.appendChild(c); });
+    grid.appendChild(frag);
+
+    var isFiltered = state.cat !== '' || state.ym !== '';
+    countEl.textContent = isFiltered
+      ? shown + '件を表示中（全' + cards.length + '件）'
+      : '全' + cards.length + '件';
+    emptyEl.hidden = shown !== 0;
+    resetBtn.hidden = !isFiltered && state.sort === 'new';
+
+    syncControls();
+    writeHash();
+  }
+
+  chipBox.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.chip') : null;
+    if (!btn) return;
+    state.cat = btn.getAttribute('data-cat') || '';
+    apply();
+  });
+  ymSel.addEventListener('change', function () { state.ym = ymSel.value; apply(); });
+  sortSel.addEventListener('change', function () { state.sort = sortSel.value; apply(); });
+  resetBtn.addEventListener('click', function () {
+    state = { cat: '', ym: '', sort: 'new' };
+    apply();
+  });
+  window.addEventListener('hashchange', function () {
+    state = { cat: '', ym: '', sort: 'new' };
+    readHash();
+    apply();
+  });
+
+  readHash();
+  apply();
+})();
+</script>

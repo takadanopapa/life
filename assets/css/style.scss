@@ -121,6 +121,97 @@ a:hover { color: var(--accent-deep); }
   border-left: 5px solid var(--accent);
 }
 
+/* ===== 一覧のしぼりこみ・並べ替え ===== */
+/* .card は display:flex を持つため、hidden 属性を確実に効かせる */
+[hidden] { display: none !important; }
+
+.filters {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 18px 12px;
+  margin: 0 0 22px;
+}
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+}
+.filter-row + .filter-row { margin-top: 12px; }
+.filter-label {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: .04em;
+  flex: 0 0 auto;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 700;
+  color: #4a5058;
+  background: #f3f0eb;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent-deep); }
+.chip.is-on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.chip-n {
+  margin-left: 6px;
+  font-size: .74rem;
+  font-weight: 600;
+  opacity: .72;
+}
+.filter-select {
+  font: inherit;
+  font-size: .88rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 7px 10px;
+  cursor: pointer;
+  max-width: 100%;
+}
+.filter-select:hover { border-color: var(--accent); }
+.filter-reset {
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 1px dotted currentColor;
+  padding: 0 0 1px;
+  cursor: pointer;
+}
+.filter-reset:hover { color: var(--accent-deep); }
+.filter-count {
+  margin: 12px 0 0;
+  font-size: .8rem;
+  color: var(--muted);
+}
+.filter-empty {
+  margin: 0 0 60px;
+  padding: 28px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
 /* ===== カード一覧 ===== */
 .card-grid {
   display: grid;
@@ -477,6 +568,15 @@ a:hover { color: var(--accent-deep); }
 @media (max-width: 600px) {
   .hero { padding: 54px 0 60px; }
   .card-grid { grid-template-columns: 1fr; }
+
+  /* しぼりこみ：狭い画面では「ラベル＋操作」を1行ずつ折り返す */
+  .filters { padding: 14px 14px 10px; }
+  .filter-row { gap: 8px 10px; }
+  .chips { flex-basis: 100%; }
+  .filter-select { flex: 1 1 45%; min-width: 0; }
+  .filter-reset { flex-basis: 100%; text-align: left; }
+  .chip { font-size: .82rem; padding: 6px 12px; }
+  .filter-count { margin-top: 10px; }
 
   /* ヘッダー：狭い画面ではロゴとナビを縦に積んで中央寄せにし、
      高さ固定をやめる。ナビ項目（特に「このブログについて」）は
