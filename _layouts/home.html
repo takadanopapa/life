@@ -90,7 +90,9 @@ layout: default
        data-ym="{{ post.date | date: '%Y-%m' }}"
        data-date="{{ post.date | date: '%Y%m%d%H%M' }}">
       {% if post.hero %}
-      <div class="card-thumb" style="background-image:url('{{ post.hero | relative_url }}')"></div>
+      <div class="card-thumb" style="--thumb:url('{{ post.hero | relative_url }}')">
+        <img src="{{ post.hero | relative_url }}" alt="" loading="lazy">
+      </div>
       {% else %}
       <div class="card-thumb card-thumb--ph"></div>
       {% endif %}
