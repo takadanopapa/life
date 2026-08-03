@@ -92,6 +92,14 @@ BabaBlog-Inbox/
 3. 各フォルダについて：
    1. `meta.json` を読み、店名(`shop_hint`)・カテゴリ・場所・メモを取得。
    2. 画像を `download_file_content` で取得し、ローカルの一時パスに保存。
+      - 復元は `node scripts/decode-drive-file.mjs <driveJson> <出力先>`。
+        このスクリプトが復元直後に `scripts/optimize_images.py` を呼び、
+        **長辺1600pxの本体＋`-thumb.jpg`(640px)＋`-blur.jpg`(32px)** の3枚をそろえる。
+      - スマホ原寸（長辺3000px超・1枚3〜7MB）をそのまま置くと、記事一覧が
+        表示されなくなる（2026-08-03 に実際に発生）。`WARN: 画像最適化に失敗` が出たら
+        `python scripts/optimize_images.py <画像フォルダ>` を手で実行してから先へ進む。
+      - push 前に `python scripts/verify_images.py` を実行して、
+        hero に対応する `-thumb` / `-blur` が欠けていないことを確認する。
    3. `WRITING_GUIDE.md` を読み、Web検索で店情報を裏取り（不確かなら書かない）。
    4. `node scripts/new-post.mjs --title ... --slug ... --category ... --shop ... --images "<一時パス,...>"` で枠＋画像を作成。
    5. 生成された `_posts/*.md` の本文をペルソナで執筆・上書き。
