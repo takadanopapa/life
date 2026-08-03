@@ -39,7 +39,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="餃子の王将 高田馬場店の夏の満腹セットのメニューと食後の卓上">
+  <img src="{{ img | relative_url }}" alt="餃子の王将 高田馬場店の夏の満腹セットのメニューと食後の卓上" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

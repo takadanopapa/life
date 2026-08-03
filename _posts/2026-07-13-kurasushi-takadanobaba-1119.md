@@ -37,7 +37,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="くら寿司 高田馬場駅前店で食べた夏のかき氷とビッくらポンの景品">
+  <img src="{{ img | relative_url }}" alt="くら寿司 高田馬場駅前店で食べた夏のかき氷とビッくらポンの景品" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

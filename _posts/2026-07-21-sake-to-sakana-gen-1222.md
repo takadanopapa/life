@@ -36,7 +36,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="酒と肴 弦の炙りチャーシュー混ぜそば">
+  <img src="{{ img | relative_url }}" alt="酒と肴 弦の炙りチャーシュー混ぜそば" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

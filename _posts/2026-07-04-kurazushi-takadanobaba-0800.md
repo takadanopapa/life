@@ -22,7 +22,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="くら寿司のビッくらポンとスヌーピーコラボの景品ポスター">
+  <img src="{{ img | relative_url }}" alt="くら寿司のビッくらポンとスヌーピーコラボの景品ポスター" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

@@ -35,7 +35,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="ゴーゴーカレー 高田馬場駅前スタジアム店の店構え">
+  <img src="{{ img | relative_url }}" alt="ゴーゴーカレー 高田馬場駅前スタジアム店の店構え" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

@@ -39,7 +39,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="GiGO高田馬場でポケモンフレンダを遊ぶ娘">
+  <img src="{{ img | relative_url }}" alt="GiGO高田馬場でポケモンフレンダを遊ぶ娘" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

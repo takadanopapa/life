@@ -22,7 +22,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="料理の写真">
+  <img src="{{ img | relative_url }}" alt="料理の写真" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

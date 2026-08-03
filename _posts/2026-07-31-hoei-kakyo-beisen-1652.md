@@ -38,7 +38,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="豊栄過橋米線 高田馬場2号店のリニューアルオープン告知">
+  <img src="{{ img | relative_url }}" alt="豊栄過橋米線 高田馬場2号店のリニューアルオープン告知" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

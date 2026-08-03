@@ -36,7 +36,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="よみうりランド プールWAIの水遊び用アスレチックと朝の入場待ちの様子">
+  <img src="{{ img | relative_url }}" alt="よみうりランド プールWAIの水遊び用アスレチックと朝の入場待ちの様子" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

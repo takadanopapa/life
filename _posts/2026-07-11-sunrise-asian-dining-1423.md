@@ -39,7 +39,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="サンライズ アジアンダイニング&バーの店頭とランチメニュー">
+  <img src="{{ img | relative_url }}" alt="サンライズ アジアンダイニング&バーの店頭とランチメニュー" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

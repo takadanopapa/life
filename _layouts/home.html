@@ -90,8 +90,22 @@ layout: default
        data-ym="{{ post.date | date: '%Y-%m' }}"
        data-date="{{ post.date | date: '%Y%m%d%H%M' }}">
       {% if post.hero %}
-      <div class="card-thumb" style="--thumb:url('{{ post.hero | relative_url }}')">
-        <img src="{{ post.hero | relative_url }}" alt="" loading="lazy">
+      {%- comment -%}
+        一覧では原寸を出さない。写真は 640px の -thumb、ぼかし背景は 32px の -blur を使う。
+        （背景画像は loading="lazy" が効かないので、ここに原寸を置くと全記事分が一斉に走る）
+      {%- endcomment -%}
+      {%- assign _ext = post.hero | split: '.' | last | downcase -%}
+      {%- if _ext == 'svg' -%}
+        {%- assign _thumb = post.hero -%}
+        {%- assign _blur = post.hero -%}
+      {%- else -%}
+        {%- assign _stem = post.hero | split: '.' | first -%}
+        {%- assign _thumb = _stem | append: '-thumb.jpg' -%}
+        {%- assign _blur = _stem | append: '-blur.jpg' -%}
+      {%- endif -%}
+      <div class="card-thumb" style="--thumb:url('{{ _blur | relative_url }}')">
+        <img src="{{ _thumb | relative_url }}" alt="" decoding="async"
+             {% if forloop.index <= 3 %}loading="eager" fetchpriority="high"{% else %}loading="lazy" fetchpriority="low"{% endif %}>
       </div>
       {% else %}
       <div class="card-thumb card-thumb--ph"></div>

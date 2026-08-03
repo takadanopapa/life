@@ -37,7 +37,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="戸山プレイパークの大きなロープブランコで遊ぶ子ども">
+  <img src="{{ img | relative_url }}" alt="戸山プレイパークの大きなロープブランコで遊ぶ子ども" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

@@ -22,7 +22,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="つけ蕎麦 安土 高田馬場本店の外観">
+  <img src="{{ img | relative_url }}" alt="つけ蕎麦 安土 高田馬場本店の外観" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

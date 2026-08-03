@@ -231,7 +231,8 @@ a:hover { color: var(--accent-deep); }
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 /* サムネイル：写真を切り抜かず全体を見せる。
-   カードの高さは揃えたいので、背景に同じ写真をぼかして敷いて余白を埋める。 */
+   カードの高さは揃えたいので、背景に同じ写真をぼかして敷いて余白を埋める。
+   背景に入るのは 32px の -blur（1枚1KB前後）。元が小さいので ぼかしは軽くて足りる。 */
 .card-thumb {
   position: relative;
   height: 220px;
@@ -245,7 +246,7 @@ a:hover { color: var(--accent-deep); }
   background-image: var(--thumb);
   background-size: cover;
   background-position: center;
-  filter: blur(16px) brightness(.9) saturate(1.05);
+  filter: blur(8px) brightness(.9) saturate(1.05);
   transform: scale(1.2);   /* ぼかしの端が透けないよう少し拡大 */
   z-index: 0;
 }
@@ -336,7 +337,7 @@ a:hover { color: var(--accent-deep); }
   background-image: var(--hero);
   background-size: cover;
   background-position: center;
-  filter: blur(30px) brightness(.82) saturate(1.1);
+  filter: blur(12px) brightness(.82) saturate(1.1);   /* 背景は 32px の -blur なので軽く足りる */
   transform: scale(1.18);   /* ぼかしの端が透けないよう少し拡大 */
   z-index: 0;
 }

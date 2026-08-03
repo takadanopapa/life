@@ -26,7 +26,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="高田馬場のキッチンカー PIKNIK KEBAB">
+  <img src="{{ img | relative_url }}" alt="高田馬場のキッチンカー PIKNIK KEBAB" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

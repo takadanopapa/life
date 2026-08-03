@@ -37,7 +37,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="東京海老トマトの海老トマトラーメンと店舗外観">
+  <img src="{{ img | relative_url }}" alt="東京海老トマトの海老トマトラーメンと店舗外観" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

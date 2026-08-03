@@ -40,7 +40,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="北柏木公園の盆おどり大会（新宿区北新宿）">
+  <img src="{{ img | relative_url }}" alt="北柏木公園の盆おどり大会（新宿区北新宿）" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

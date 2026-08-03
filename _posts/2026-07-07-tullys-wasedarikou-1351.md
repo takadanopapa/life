@@ -33,7 +33,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="タリーズコーヒー早大理工店の外観">
+  <img src="{{ img | relative_url }}" alt="タリーズコーヒー早大理工店の外観" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 

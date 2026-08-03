@@ -13,8 +13,19 @@ layout: default
   {% endif %}
 
   {% if page.hero %}
-  <div class="post-hero" style="--hero: url('{{ page.hero | relative_url }}')">
-    <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name | default: page.title }}">
+  {%- comment -%}
+    ぼかし背景は 32px の -blur を使う（背景画像に原寸を置くと hero が二重に読み込まれる）。
+    hero 本体はこのページの最大要素なので、遅延させず優先的に取りに行かせる。
+  {%- endcomment -%}
+  {%- assign _ext = page.hero | split: '.' | last | downcase -%}
+  {%- if _ext == 'svg' -%}
+    {%- assign _blur = page.hero -%}
+  {%- else -%}
+    {%- assign _blur = page.hero | split: '.' | first | append: '-blur.jpg' -%}
+  {%- endif -%}
+  <div class="post-hero" style="--hero: url('{{ _blur | relative_url }}')">
+    <img src="{{ page.hero | relative_url }}" alt="{{ page.shop_name | default: page.title }}"
+         loading="eager" fetchpriority="high" decoding="async">
   </div>
   {% endif %}
 

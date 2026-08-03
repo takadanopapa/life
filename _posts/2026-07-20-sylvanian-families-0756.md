@@ -37,7 +37,7 @@ affiliate: true
 
 <div class="photo-gallery">
   {% for img in page.images %}
-  <img src="{{ img | relative_url }}" alt="娘が遊ぶシルバニアファミリー 赤い屋根の大きなお家">
+  <img src="{{ img | relative_url }}" alt="娘が遊ぶシルバニアファミリー 赤い屋根の大きなお家" loading="lazy" decoding="async">
   {% endfor %}
 </div>
 
