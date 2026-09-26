@@ -10,6 +10,7 @@ hero: /assets/img/posts/2026-08-24-sonargaon-kebab-1237/01.jpg
 images:
   - /assets/img/posts/2026-08-24-sonargaon-kebab-1237/01.jpg
   - /assets/img/posts/2026-08-24-sonargaon-kebab-1237/02.jpg
+affiliate: true
 ---
 
 高田馬場3丁目の通りを歩いていたら、真っ赤な庇が目に入りました。「SONARGAON ショナルガ／KEBAB & CURRY ケバブ＆カレー」。端にはハラール認証のマークがあって、その隣に「店内食事OK!」「テイクアウトOK!」と大きく書いてあります。上の階は会員制のカフェバー「我他彼此（ガタピシ）」が入っているビルで、その1階部分です。
@@ -25,6 +26,19 @@ images:
 ## まとめ
 
 高田馬場はケバブの店がいくつかありますが、この赤い庇はいままで意識していませんでした。ハラール認証があってテイクアウトもできる、という条件で覚えておくと使いやすそうです。
+
+<div class="affiliate-box">
+  <p class="ab-head">家でケバブを食べるなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fniigata-shop%2F0542-001-01%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/niigata-shop/cabinet/item/0542/0542-001-01.jpg?_ex=300x300" alt="チキンケバブサンド（真空冷凍）4食入 FUNKY TURKEY" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">チキンケバブサンド（真空冷凍）4食入 FUNKY TURKEY</span>
+      <span class="ab-price">¥3,600</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -45,4 +59,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ この店の食べログ・Googleマップのページを確認できなかったため、評価点数とレビュー件数は記載していません。営業時間・定休日・価格も裏付けが取れなかったため省いています。メニュー名は確認できていないので、料理は写真から見てとれる範囲の描写にとどめました。最新情報は店頭でご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">ピタパンで手作りするなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fthemeatguy%2F10004440%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/themeatguy/cabinet/01885019/pi017/imgrc0069015777.jpg?_ex=300x300" alt="ピタパン(冷凍パン）6.5インチサイズ 5枚入り☆手作りピタサンドに♪ -PI017" loading="lazy">
+      <span class="as-title">ピタパン(冷凍パン）6.5インチサイズ 5枚入り☆手作りピタサンドに♪ -PI017</span>
+      <span class="as-price">¥1,040</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmamapan%2F16060017%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/mamapan/cabinet/flozen/16060017_n_768.jpg?_ex=300x300" alt="デルソーレ ピタパン 焼成済 60g×5枚入り 冷凍パン_" loading="lazy">
+      <span class="as-title">デルソーレ ピタパン 焼成済 60g×5枚入り 冷凍パン_</span>
+      <span class="as-price">¥687</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

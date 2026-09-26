@@ -9,6 +9,7 @@ shop_name: 江戸麺 GOODLE
 hero: /assets/img/posts/2026-09-06-goodle-takadanobaba-1332/01.jpg
 images:
   - /assets/img/posts/2026-09-06-goodle-takadanobaba-1332/01.jpg
+affiliate: true
 ---
 
 高田馬場駅から歩いて数分、高田馬場4丁目に「江戸麺 GOODLE」があります。開店を伝えた高田馬場経済新聞の記事によると、しょうゆ・塩・背脂煮干し・鶏白湯という4種類のスープを掲げて2022年6月23日にオープンした店。店名は「GOODな東京（江戸）NOODLEで世界を目指す」が由来だそうです。日曜のお昼に寄ってみました。
@@ -26,6 +27,19 @@ images:
 ## まとめ
 
 高田馬場のラーメン屋はもう数えきれないくらい入っていますが、器が透明なつけ麺は記憶にありませんでした。見た目でちゃんと驚かせてくる店。また別のスープでも来てみます。
+
+<div class="affiliate-box">
+  <p class="ab-head">家でつけ麺を食べるなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fshinko-shokuhin%2F10000074%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/shinko-shokuhin/cabinet/07293535/tsuke/10000074_thum.jpg?_ex=300x300" alt="全粒粉 麺 つけ麺セット 全粒粉麺 お取り寄せラーメン つけめん ラーメン 生麺 太麺…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">全粒粉 麺 つけ麺セット 全粒粉麺 お取り寄せラーメン つけめん ラーメン 生麺 太麺…</span>
+      <span class="ab-price">¥1,930</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -46,4 +60,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ Googleマップの評価点数は確実な数値を確認できなかったため記載していません。注文したメニュー名は確証がないため書かず、料理は写真から見てとれる範囲の描写にとどめています。席数は開店時の記事の数字です。営業時間・定休日・価格は変わることがあるので、最新情報は公式Xや店頭でご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">つけ麺をお取り寄せするなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fotoshuclub%2F8500217%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/otoshuclub/cabinet/thum/2024/8500217-01.jpg?_ex=300x300" alt="とみ田 つけめん（3食 / 6食） 富田 つけ麺 言わずと知れた千葉県松戸の超行列店…" loading="lazy">
+      <span class="as-title">とみ田 つけめん（3食 / 6食） 富田 つけ麺 言わずと知れた千葉県松戸の超行列店…</span>
+      <span class="as-price">¥4,680</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbali-indah%2F10123111%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/bali-indah/cabinet/202306/t27fst28-700a.jpg?_ex=300x300" alt="ご当地ラーメン 濃厚 極太つけ麺 2店舗8食 セット ( 千葉 とみ田 ・ 埼玉 頑者 )…" loading="lazy">
+      <span class="as-title">ご当地ラーメン 濃厚 極太つけ麺 2店舗8食 セット ( 千葉 とみ田 ・ 埼玉 頑者 )…</span>
+      <span class="as-price">¥3,888</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

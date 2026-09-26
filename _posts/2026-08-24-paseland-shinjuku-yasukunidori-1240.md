@@ -11,6 +11,7 @@ images:
   - /assets/img/posts/2026-08-24-paseland-shinjuku-yasukunidori-1240/01.jpg
   - /assets/img/posts/2026-08-24-paseland-shinjuku-yasukunidori-1240/02.jpg
   - /assets/img/posts/2026-08-24-paseland-shinjuku-yasukunidori-1240/03.jpg
+affiliate: true
 ---
 
 上の子（年長）の同級生の送別会で、新宿にある「パセランド」を使ってきました。カラオケパセラの部屋にキッズスペースを組んだもので、新宿靖国通り店に併設されているタイプです。子どもが何人も集まる会をどこでやるか、というのは毎回悩むところなので、こういう選択肢があるのは助かります。
@@ -26,6 +27,19 @@ images:
 ## まとめ
 
 食事の中身は別途調整が必要でしたが、「子どもを放しておける広い個室」という点では期待どおりでした。人数が集まる子どもの会には、また候補に入れると思います。
+
+<div class="affiliate-box">
+  <p class="ab-head">家でもボールプールで遊ぶなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmumchan%2Findoortoys02%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/mumchan/cabinet/08182095/08281624/indoortoys02-1.jpg?_ex=300x300" alt="ボールプール 折りたたみ ボールハウス ボール ボールプール用ボール 折り畳みボールプール…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">ボールプール 折りたたみ ボールハウス ボール ボールプール用ボール 折り畳みボールプール…</span>
+      <span class="ab-price">¥4,380</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -47,4 +61,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ Googleマップの評価は確実な数値を確認できなかったため記載していません。料理のメニュー名は確認できていないので、写真から見てとれる範囲の描写にとどめています。料金・プラン内容・持ち込みの可否は変わることがあるので、公式サイトまたは店舗にご確認ください。写真に写っているお子さんの顔にはモザイクをかけています。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">おうちで体を動かす遊具</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-baby%2Fbo81069xx%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/e-baby/cabinet/1st/bo81069xx_5.jpg?_ex=300x300" alt="ロング＆なだらかスロープ折りたたみすべり台 コンパクト キッズ 子供用 スライダー すべりだい…" loading="lazy">
+      <span class="as-title">ロング＆なだらかスロープ折りたたみすべり台 コンパクト キッズ 子供用 スライダー すべりだい…</span>
+      <span class="as-price">¥5,979</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-baby%2F4700%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/e-baby/cabinet/1st/4700xx.jpg?_ex=300x300" alt="かんたんおりたたみ2段ジム 4700 world ワールド 野中製作所×ネビオ室内遊具 子供…" loading="lazy">
+      <span class="as-title">かんたんおりたたみ2段ジム 4700 world ワールド 野中製作所×ネビオ室内遊具 子供…</span>
+      <span class="as-price">¥15,800</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

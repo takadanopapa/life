@@ -11,6 +11,7 @@ images:
   - /assets/img/posts/2026-09-23-natsunoie-asakusa-1101/01.jpg
   - /assets/img/posts/2026-09-23-natsunoie-asakusa-1101/02.jpg
   - /assets/img/posts/2026-09-23-natsunoie-asakusa-1101/03.jpg
+affiliate: true
 ---
 
 秋分の日、家族で浅草の花やしきへ。お昼は、花やしきのすぐそばにあるとんかつの店「夏の家」に入りました。木目の縦長の看板に、青い字で「とんかつ 夏の家」。浅草らしい昔ながらの店構えです。
@@ -28,6 +29,19 @@ images:
 ## まとめ
 
 花やしきの前後にちょうどいい、家族で入りやすい定食屋さんでした。次は自分もとんかつを頼んでみます。
+
+<div class="affiliate-box">
+  <p class="ab-head">新幹線のプレートを家でも</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fshopforest%2F0523-087909%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/shopforest/cabinet/08939163/compass1708574707.jpg?_ex=300x300" alt="お子様ランチ プレート 車 新幹線 電車 自動車 食器 のりものランチプレート お子様ランチ…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">お子様ランチ プレート 車 新幹線 電車 自動車 食器 のりものランチプレート お子様ランチ…</span>
+      <span class="ab-price">¥2,480</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -47,4 +61,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ Googleマップの評価点数は確実な数値を確認できなかったため記載していません。子ども向けプレートのメニュー名は確証がないため書かず、写真から見てとれる範囲の描写にとどめています。営業時間・定休日・価格は変わることがあるので、最新情報はお店でご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">家でとんかつを食べるなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkurokatutei%2Ft-3%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/kurokatutei/cabinet/06863184/06864084/imgrc0086168149.jpg?_ex=300x300" alt="黒豚 とんかつ 冷凍 トンカツ とんかつソース 鹿児島県産 国産 餃子 切り落とし 仕送り…" loading="lazy">
+      <span class="as-title">黒豚 とんかつ 冷凍 トンカツ とんかつソース 鹿児島県産 国産 餃子 切り落とし 仕送り…</span>
+      <span class="as-price">¥3,899</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkwgchi%2Fkenko-katsu%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/kwgchi/cabinet/button/2019_700/2019kenko_katsu.gif?_ex=300x300" alt="ギフト 青森けんこう 豚 ロースカツ 4枚入 | とんかつ 国産 出産 内祝い 母の日 父の日…" loading="lazy">
+      <span class="as-title">ギフト 青森けんこう 豚 ロースカツ 4枚入 | とんかつ 国産 出産 内祝い 母の日 父の日…</span>
+      <span class="as-price">¥2,160</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

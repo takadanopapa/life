@@ -10,6 +10,7 @@ hero: /assets/img/posts/2026-08-26-butayama-takadanobaba-1226/01.jpg
 images:
   - /assets/img/posts/2026-08-26-butayama-takadanobaba-1226/01.jpg
   - /assets/img/posts/2026-08-26-butayama-takadanobaba-1226/02.jpg
+affiliate: true
 ---
 
 高田馬場駅のすぐ近く、地下にカラオケBanBanが入っているビルの1階に、黄色い看板の「ラーメン豚山 高田馬場店」があります。二郎系（＝麺も具も量が多い、濃いめのラーメン）の店で、通るたびに視界に入ってはいたのですが、入るのは今回が初めてでした。お昼に一人で寄ってみました。
@@ -27,6 +28,19 @@ images:
 ## まとめ
 
 高田馬場で二郎系というと選択肢はいくつもありますが、11時から23時まで通しでやっているのは使いやすい。仕事の合間でも、遅くなった日でも入れます。
+
+<div class="affiliate-box">
+  <p class="ab-head">家で二郎系を作るなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmenkuru-shop%2Fjiro3%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/menkuru-shop/cabinet/item/jiro-neko/imgrc0106610867.jpg?_ex=300x300" alt="二郎系 ラーメン (3食 オーション 麺 &amp;濃厚豚醤油 スープ のセット/メール便) /超…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">二郎系 ラーメン (3食 オーション 麺 &amp;濃厚豚醤油 スープ のセット/メール便) /超…</span>
+      <span class="ab-price">¥1,650</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -49,4 +63,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ Googleマップの評価点数は確実な数値を確認できなかったため記載していません。注文したメニュー名は確証がないため書かず、料理は写真から見てとれる範囲の描写にとどめています。価格・営業時間は変わることがあるので、最新情報は公式ページや店頭でご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">トッピングを足すなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Faizubrandhall%2F10000124%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/aizubrandhall/cabinet/compass1767776327.jpg?_ex=300x300" alt="激安 二郎系 チャーシュー 極厚 カット済み レトルト 8枚 600g 小分け 常温保存二郎…" loading="lazy">
+      <span class="as-title">激安 二郎系 チャーシュー 極厚 カット済み レトルト 8枚 600g 小分け 常温保存二郎…</span>
+      <span class="as-price">¥3,240</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmenkuru-shop%2Fjiro4%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/menkuru-shop/cabinet/item/jiro-cool-cha/imgrc0112295378.jpg?_ex=300x300" alt="二郎系 ラーメン (冷凍・4食～ オーション 麺 &amp;濃厚豚醤油 スープ &amp;極厚 チャーシュー…" loading="lazy">
+      <span class="as-title">二郎系 ラーメン (冷凍・4食～ オーション 麺 &amp;濃厚豚醤油 スープ &amp;極厚 チャーシュー…</span>
+      <span class="as-price">¥4,590</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

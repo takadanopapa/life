@@ -10,6 +10,7 @@ hero: /assets/img/posts/2026-08-29-jinza-takadanobaba-1330/02.jpg
 images:
   - /assets/img/posts/2026-08-29-jinza-takadanobaba-1330/02.jpg
   - /assets/img/posts/2026-08-29-jinza-takadanobaba-1330/01.jpg
+affiliate: true
 ---
 
 高田馬場駅の戸山口を出てすぐ、「自家製麺」「肉うどん」と大きく出た白い看板の店があります。赤い二重丸のなかに「甚」、その下に JINZA。甚三（じんざ）の高田馬場店です。前を通るたびに視界に入っていて、この日はまだ入らずに看板だけ撮ってきました。
@@ -25,6 +26,19 @@ images:
 ## まとめ
 
 自家製麺で、麺の増量が80円から。この立地でこの営業時間だと、行けるタイミングは限られます。次は看板を撮るだけで済ませずに、食券を買って入ってみます。
+
+<div class="affiliate-box">
+  <p class="ab-head">家で讃岐うどんを食べるなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fdonmai%2Fnamaudon12%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/donmai/cabinet/udon/udon9/imgrc0154136349.jpg?_ex=300x300" alt="うどん 讃岐うどん 生うどん 9食セット 生麺 300g×3袋 冷やし 温うどん 両対応 香川…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">うどん 讃岐うどん 生うどん 9食セット 生麺 300g×3袋 冷やし 温うどん 両対応 香川…</span>
+      <span class="ab-price">¥598</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -46,4 +60,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ 店名は公式サイトの表記が「甚三 高田馬場店」、食べログや報道では「肉讃岐 甚三うどん 高田馬場店」となっています。Googleマップの評価点数は確実な数値を確認できなかったため記載していません。うどん1杯ごとの値段は店頭写真から読み取れなかったので書いていません。価格・営業時間は変わることがあるので、最新情報は公式ページや店頭でご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">冷凍のうどんを常備するなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fsanuki-haruna%2F10000087%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/sanuki-haruna/cabinet/06931250/imgrc0110436985.jpg?_ex=300x300" alt="さぬきうどん 麺処 春奈 6人前 選べる美味しい具材24パターン 食品ランキング1位…" loading="lazy">
+      <span class="as-title">さぬきうどん 麺処 春奈 6人前 選べる美味しい具材24パターン 食品ランキング1位…</span>
+      <span class="as-price">¥3,980</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-meatpia-sanuki%2Fuk-11%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/auc-meatpia-sanuki/cabinet/02799868/imgrc0064619107.jpg?_ex=300x300" alt="冷凍讃岐うどん、具入りうどんセットA10食入（肉うどん5食・きつねうどん5食）別添スープタイプ" loading="lazy">
+      <span class="as-title">冷凍讃岐うどん、具入りうどんセットA10食入（肉うどん5食・きつねうどん5食）別添スープタイプ</span>
+      <span class="as-price">¥3,220</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

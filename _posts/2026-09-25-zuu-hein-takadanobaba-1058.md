@@ -10,6 +10,7 @@ hero: /assets/img/posts/2026-09-25-zuu-hein-takadanobaba-1058/01.jpg
 images:
   - /assets/img/posts/2026-09-25-zuu-hein-takadanobaba-1058/01.jpg
   - /assets/img/posts/2026-09-25-zuu-hein-takadanobaba-1058/02.jpg
+affiliate: true
 ---
 
 高田馬場はミャンマー料理の店が多く、「リトル・ヤンゴン」と呼ばれることもある街です。その中の一軒、「Zuu&Hein Myanmar Tea House 高田馬場店」でモヒンガーセットを食べてきました。モヒンガーは、ナマズでとった出汁のスープに素麺のような麺を合わせる、ミャンマーの定番の麺料理です。
@@ -30,6 +31,19 @@ images:
 
 小皿がたくさん付いてくるので、ミャンマー料理をひと通り試してみたいときにちょうどいいセットでした。午前中から開いている店なので、次は早めの時間に来てみたいです。
 
+<div class="affiliate-box">
+  <p class="ab-head">家でミャンマーの味を試すなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Ftirakita%2Ffd-inscry-299%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tirakita/cabinet/235/fd-inscry-299.jpg?_ex=300x300" alt="ミャンマーチキンカレー チェッターヒン Kyet Thar Hin / ミャンマーカレー…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">（マイルド）ミャンマーチキンカレー チェッターヒン Kyet Thar Hin / ミャンマーカレー…</span>
+      <span class="ab-price">¥1,180</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
+
 <div class="photo-gallery">
   {% for img in page.images %}
   <img src="{{ img | relative_url }}" alt="Zuu&Hein Myanmar Tea House のモヒンガーセット。石鍋のスープ、白い皿の細い麺、揚げ物や和え物の小皿、ミルクティー色の飲み物" loading="lazy" decoding="async">
@@ -49,4 +63,17 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ 食べログ・Googleマップの評価点数は確実な数値を確認できなかったため記載していません。セットの小皿は、名前に確証がないものは写真から見てとれる範囲の描写にとどめています。営業時間・定休日・価格は変わることがあるので、最新情報はお店でご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">ミャンマーのレトルトカレー</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Ftirakita%2Ffd-inscry-266%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tirakita/cabinet/223/fd-inscry-266.jpg?_ex=300x300" alt="ミャンマーチキンカレー チェッターヒン Kyet Thar Hin 2点までメール便可…" loading="lazy">
+      <span class="as-title">（極辛）ミャンマーチキンカレー チェッターヒン Kyet Thar Hin 2点までメール便可…</span>
+      <span class="as-price">¥1,180</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

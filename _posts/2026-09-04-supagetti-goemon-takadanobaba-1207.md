@@ -9,6 +9,7 @@ shop_name: 洋麺屋五右衛門 高田馬場店
 hero: /assets/img/posts/2026-09-04-supagetti-goemon-takadanobaba-1207/01.jpg
 images:
   - /assets/img/posts/2026-09-04-supagetti-goemon-takadanobaba-1207/01.jpg
+affiliate: true
 ---
 
 高田馬場駅を出てすぐ、青柳ビルの地下1階に「洋麺屋五右衛門 高田馬場店」があります。公式サイトの店舗情報によると、この夏は6月27日から7月5日まで改装で休んでいた店。再開してからは入っていなかったので、平日のお昼に一人で寄ってみました。
@@ -26,6 +27,19 @@ images:
 ## まとめ
 
 駅からほぼ歩かずに入れて、夜10時まで通しでやっている。この2つだけでも、高田馬場で働いている身にはありがたい店です。遅めの昼にも、早めの夜にも寄れます。
+
+<div class="affiliate-box">
+  <p class="ab-head">家で明太子パスタを作るなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkyushu-sanchoku%2Fntk10000410%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/kyushu-sanchoku/cabinet/ntk/ntk10000410_05.jpg?_ex=300x300" alt="パスタソース 「博多めんたいクリームパスタソース 120g×3袋」 ポスト投函 メール便…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">パスタソース 「博多めんたいクリームパスタソース 120g×3袋」 ポスト投函 メール便…</span>
+      <span class="ab-price">¥1,380</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -46,4 +60,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ Googleマップの評価点数は確実な数値を確認できなかったため記載していません。注文したメニュー名は確証がないため書かず、料理は写真から見てとれる範囲の描写にとどめています。掲示の価格は撮影時のもので、価格・営業時間は変わることがあるので、最新情報は公式ページや店頭でご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">明太子をたっぷり使うなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Ffukuya%2F622138%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/fukuya/cabinet/kateiyou/imgrc0170934889.jpg?_ex=300x300" alt="楽天グルメ大賞受賞 ふくや 家庭用明太子 440g 110g×4 選べる辛さ お中元 御中元…" loading="lazy">
+      <span class="as-title">楽天グルメ大賞受賞 ふくや 家庭用明太子 440g 110g×4 選べる辛さ お中元 御中元…</span>
+      <span class="as-price">¥4,320</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fwakasugi%2Fmentai-kire-500%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/wakasugi/cabinet/hakata-gurume/mentai/imgrc0126997656.jpg?_ex=300x300" alt="無着色明太子 博多辛子めんたい切れ子(500g) 訳あり c1 新鮮タラコ たらこ お取り寄せ…" loading="lazy">
+      <span class="as-title">無着色明太子 博多辛子めんたい切れ子(500g) 訳あり c1 新鮮タラコ たらこ お取り寄せ…</span>
+      <span class="as-price">¥1,620</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

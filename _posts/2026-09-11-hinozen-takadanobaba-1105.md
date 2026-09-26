@@ -9,6 +9,7 @@ shop_name: 炙処 火ノ膳 高田馬場店
 hero: /assets/img/posts/2026-09-11-hinozen-takadanobaba-1105/01.jpg
 images:
   - /assets/img/posts/2026-09-11-hinozen-takadanobaba-1105/01.jpg
+affiliate: true
 ---
 
 高田馬場駅のすぐ近く、路地を入ったところにある「炙処 火ノ膳」で、かつお定食を食べてきました。ホットペッパーグルメの紹介によると、豊洲の仲卸が直営する炭火焼魚の店で、魚や肉を炭火でじっくり焼いているそうです。
@@ -26,6 +27,19 @@ images:
 ## まとめ
 
 高田馬場で魚の定食を食べたいときの候補が一つ増えました。炭火焼の魚も気になるので、次は焼き魚のほうを頼んでみます。
+
+<div class="affiliate-box">
+  <p class="ab-head">家でかつおのたたきを食べるなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fdaikuma%2F007%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/daikuma/cabinet/06098375/007-sku-main.jpg?_ex=300x300" alt="かつおのたたき 海鮮 かつお 藁焼き わら焼き カツオ たたき カツオのたたき 鰹のタタキ…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">かつおのたたき 海鮮 かつお 藁焼き わら焼き カツオ たたき カツオのたたき 鰹のタタキ…</span>
+      <span class="ab-price">¥4,500</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -46,4 +60,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ Googleマップの評価点数は確実な数値を確認できなかったため記載していません。定食のうち写真に写っているのはかつおの皿だけなので、ほかの品は書いていません。営業時間・定休日・価格は変わることがあるので、最新情報は公式サイトでご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">高知のかつおをお取り寄せ</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fdaikuma%2F001%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/daikuma/cabinet/06098375/001_new_main.jpg?_ex=300x300" alt="かつおのたたき ギフト 贈答用 トロ鰹 とろかつお 黒潮町 天日塩 プレゼント 海鮮ギフト…" loading="lazy">
+      <span class="as-title">かつおのたたき ギフト 贈答用 トロ鰹 とろかつお 黒潮町 天日塩 プレゼント 海鮮ギフト…</span>
+      <span class="as-price">¥5,500</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Ff392057-tosa%2F10000159%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/f392057-tosa/cabinet/item/bqaa/bqaa001.jpg?_ex=300x300" alt="鰹のタタキ 藁焼き 1.5〜2.5kg かつおのたたき 高知 藁焼き カツオ 鰹 国産…" loading="lazy">
+      <span class="as-title">鰹のタタキ 藁焼き 1.5〜2.5kg かつおのたたき 高知 藁焼き カツオ 鰹 国産…</span>
+      <span class="as-price">¥8,900</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>

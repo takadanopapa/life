@@ -12,6 +12,7 @@ images:
   - /assets/img/posts/2026-08-18-kaisenmisakiko-takadanobaba-1758/02.jpg
   - /assets/img/posts/2026-08-18-kaisenmisakiko-takadanobaba-1758/03.jpg
   - /assets/img/posts/2026-08-18-kaisenmisakiko-takadanobaba-1758/04.jpg
+affiliate: true
 ---
 
 火曜。時間がなかったので、ひとりでさっと寿司ランチにしました。高田馬場駅の早稲田口を出て、交差点を渡ったところにある回転寿司みさきへ。以前は「海鮮三崎港」という店名でしたが、いまは看板も「回転寿司 みさき」に変わっています。長くこの街にいると、こういう変わり方に妙に反応してしまいます。
@@ -29,6 +30,19 @@ images:
 ## まとめ
 
 派手さはないけれど、駅前で確実に座れて確実に寿司が出てくる。この立地でこれができる店は、あるだけでありがたいのです。
+
+<div class="affiliate-box">
+  <p class="ab-head">家で本まぐろを食べるなら</p>
+  <a class="ab-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkanetomo-maguro%2Fkanetomo01%2F" target="_blank" rel="nofollow sponsored noopener">
+    <img class="ab-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/kanetomo-maguro/cabinet/renewal/kanetomo01/item/kanetomo01_01.jpg?_ex=300x300" alt="本マグロ 赤身 柵 刺身 マグロ まぐろ 鮪 700g 訳あり お徳用 冷凍 養殖 大容量…" loading="lazy">
+    <span class="ab-body">
+      <span class="ab-title">本マグロ 赤身 柵 刺身 マグロ まぐろ 鮪 700g 訳あり お徳用 冷凍 養殖 大容量…</span>
+      <span class="ab-price">¥4,980</span>
+      <span class="ab-btn">楽天市場で見る</span>
+    </span>
+  </a>
+  <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+</div>
 
 <div class="photo-gallery">
   {% for img in page.images %}
@@ -51,4 +65,24 @@ images:
   <p style="font-size:.85em;color:#888;margin:0;">
     ※ 住所・電話・営業時間は京樽公式サイトの記載、フェアの期間は店頭ポスターの記載によります。食べログのレビュー件数とGoogleマップの評価は確実な数値を確認できなかったため記載していません。ネタは写真から確認できる範囲の描写にとどめ、メニュー名は書いていません。価格・提供内容の最新情報は公式サイトでご確認ください。
   </p>
+</div>
+
+<div class="affiliate-shelf">
+  <p class="as-head">家で海鮮丼を楽しむなら</p>
+  <div class="as-grid">
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fdining-shioso%2Fmagurotataki-1000%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/dining-shioso/cabinet/magurotataki-6.jpg?_ex=300x300" alt="ねぎとろ マグロのたたき 1kg 業務用 まぐろ 鮪 手巻き まぐろたたき まぐろのたたき…" loading="lazy">
+      <span class="as-title">ねぎとろ マグロのたたき 1kg 業務用 まぐろ 鮪 手巻き まぐろたたき まぐろのたたき…</span>
+      <span class="as-price">¥7,980</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+    <a class="as-card" href="https://af.moshimo.com/af/c/click?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkitanomachi%2Fikura_400g%2F" target="_blank" rel="nofollow sponsored noopener">
+      <img class="as-img" src="https://thumbnail.image.rakuten.co.jp/@0_mall/kitanomachi/cabinet/08999967/k10001g_ss5.jpg?_ex=300x300" alt="北海道 知床・羅臼産 鮭いくら 醤油漬け" loading="lazy">
+      <span class="as-title">北海道 知床・羅臼産 鮭いくら 醤油漬け</span>
+      <span class="as-price">¥3,980</span>
+      <span class="as-btn">楽天市場で見る</span>
+      <img src="https://i.moshimo.com/af/i/impression?a_id=5656376&amp;p_id=54&amp;pc_id=54&amp;pl_id=616" alt="" loading="lazy" width="1" height="1" style="border:0;">
+    </a>
+  </div>
 </div>
