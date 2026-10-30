@@ -17,6 +17,7 @@ h1{margin:0 0 4px;font-size:26px;color:var(--yellow);text-shadow:0 3px 0 var(--o
 .status{text-align:center;font-size:13px;color:rgba(255,255,255,.78);margin-bottom:12px}
 .status .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#888;margin-right:5px;vertical-align:middle}
 .status.ok .dot{background:var(--lime)}.status.err .dot{background:#ff3d57}
+#alt{display:none;text-align:center;margin:-6px 0 12px}#alt a{color:var(--yellow);font-size:14px;text-decoration:underline}
 .card{background:var(--cream);color:var(--purple);border:5px solid var(--orange);border-radius:22px;box-shadow:0 8px 0 var(--orange-d), inset 0 0 0 3px #fff;padding:12px 14px 14px;margin-bottom:14px}
 .card h2{margin:0 0 6px;font-size:15px;color:var(--orange-d)}
 .latest{display:flex;align-items:baseline;justify-content:center;gap:6px;font-family:var(--fontN);font-weight:700;font-size:124px;line-height:1;color:var(--purple)}
@@ -65,6 +66,7 @@ h1{margin:0 0 4px;font-size:26px;color:var(--yellow);text-shadow:0 3px 0 var(--o
 <div class="wrap">
   <h1>🎃 ハロウィン ビンゴ 👻</h1>
   <div class="status" id="status"><span class="dot"></span><span id="statusT">つないでいます…</span></div>
+  <div id="alt"><a id="altLink" href="#">番号が取れないときは、こちらのページを開いてください</a></div>
   <div class="card"><h2>いま出た番号</h2><div class="latest none" id="latest">まだ出ていません</div><div class="meta"><span id="metaL"></span><span id="metaR"></span></div></div>
   <div class="card"><h2>出た番号（<span id="cnt">0</span>個）</h2><div class="grid" id="grid"></div></div>
   <div class="card"><h2>出た順</h2><div class="order" id="order"><span class="none">まだありません</span></div></div>
@@ -88,9 +90,11 @@ function jsonp(url,timeout){return new Promise((res,rej)=>{const cb='mamcb_'+Mat
   const clean=()=>{try{delete window[cb];}catch(e){window[cb]=undefined;}s.remove();clearTimeout(t);};window[cb]=d=>{if(done)return;done=true;clean();res(d);};
   const t=setTimeout(()=>{if(done)return;done=true;clean();rej(new Error('timeout'));},timeout||12000);s.onerror=()=>{if(done)return;done=true;clean();rej(new Error('load'));};
   s.src=url+(url.indexOf('?')>=0?'&':'?')+'action=get'+SLOT+'&callback='+cb+'&_='+Date.now();document.head.appendChild(s);});}
+/* ★静的版は、まず fetch で Cookie（Google のログイン情報）を付けずに取りに行く。ログイン中のアカウントの事情（会社アカウントの制限・複数アカウント）に左右されない。だめなら JSONP */
+function viaFetch(){return fetch(API+(API.indexOf('?')>=0?'&':'?')+'action=get'+SLOT+'&_='+Date.now(),{credentials:'omit',cache:'no-store',redirect:'follow'}).then(r=>{if(!r.ok)throw new Error('http '+r.status);return r.json();});}
 function fetchState(){return new Promise((res,rej)=>{
   if(window.google&&google.script&&google.script.run){google.script.run.withSuccessHandler(r=>{try{res(JSON.parse(r));}catch(e){rej(e);}}).withFailureHandler(rej).getState();}
-  else if(API){jsonp(API).then(d=>{if(d&&typeof d==='object'&&'n' in d)res(d);else rej(new Error('bad'));}).catch(rej);}
+  else if(API){viaFetch().catch(()=>jsonp(API)).then(d=>{if(d&&typeof d==='object'&&'n' in d)res(d);else rej(new Error('bad'));}).catch(rej);}
   else{const demo=window.MAM_DEMO||{s:'demo',n:75,d:[7,25,61,3,44,12,70,33,58,19,41,66],m:'play',v:12,t:Date.now()};setTimeout(()=>res(demo),200);}});}
 function render(st,isNew){const d=st.d||[],n=st.n||75,last=d[d.length-1];
   const L=$('#latest');if(last){L.className='latest'+(isNew?' flash':'');L.innerHTML='<span>'+last+'</span><span class="ban">番</span>';$('#metaL').textContent=d.length+'個め';$('#metaR').textContent=d.length>1?'前の番号：'+d[d.length-2]:'';}
@@ -110,13 +114,13 @@ function renderQuiz(q){const box=$('#quizP');if(!q){box.classList.remove('show')
     if(stg==='2'){$('#qpAsk').textContent='えいごで いうと…';$('#qpEn').textContent=it.en;$('#qpKana').textContent=it.kana;show('#qpEn',true);show('#qpKana',true);}
     else{$('#qpAsk').textContent='えいごで なんて いう？';show('#qpEn',false);show('#qpKana',false);}}
   show('#qpAsk',true);box.classList.add('show');}
-function poll(){fetchState().then(st=>{fails=0;setStatus('ok','つながっています（自動で新しくなります）');
+function poll(){fetchState().then(st=>{fails=0;setStatus('ok','つながっています（自動で新しくなります）');$('#alt').style.display='none';
     if(lastSession!==null&&st.s!==lastSession&&(st.d||[]).length===0)toast('新しいゲームが始まりました');lastSession=st.s;
     const oldLast=cur.d&&cur.d[cur.d.length-1],newLast=(st.d||[])[(st.d||[]).length-1];
     const changed=JSON.stringify(st.d)!==JSON.stringify(cur.d)||st.m!==cur.m||st.n!==cur.n||(st.q||'')!==(cur.q||'');const isNew=!first&&newLast&&newLast!==oldLast;
     const qNew=!first&&(st.q||'')!==(cur.q||'')&&/:2$/.test(st.q||'');
     cur=st;if(changed||first)render(st,isNew);if(isNew||qNew){try{navigator.vibrate&&navigator.vibrate(isNew?150:80);}catch(e){}}first=false;})
-  .catch(()=>{fails++;setStatus('err','つながりません… もう一度ためしています');}).then(schedule);}
+  .catch(()=>{fails++;setStatus('err','つながりません… もう一度ためしています');if(API&&fails>=3){$('#altLink').href=API;$('#alt').style.display='';}}).then(schedule);}
 function schedule(){clearTimeout(timer);const ms=document.hidden?15000:Math.min(2500*Math.pow(1.6,Math.min(fails,4)),20000);timer=setTimeout(poll,ms);}
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){clearTimeout(timer);poll();}});
 /* 紙ふぶき（おめでとうのとき） */
