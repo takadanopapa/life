@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>ハロウィン ビンゴ</title>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1a0b36;--orange:#ff8a1f;--orange-d:#b9450a;--yellow:#ffd23f;--yellow-d:#b8860b;--cream:#fff7e8;--cream-d:#e3c99b;--purple:#3b0764;--purple-d:#24063f;--lime:#a6ff5e;--pink:#ff6fb5;
+  --fontJ:'Mochiy Pop One','Hiragino Maru Gothic ProN','Yu Gothic UI','Meiryo',sans-serif;--fontN:'Fredoka','Mochiy Pop One','Arial Rounded MT Bold',sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at 50% 0, #4c1d95 0, rgba(76,29,149,0) 50%),var(--bg);color:var(--cream);font-family:var(--fontJ);min-height:100vh;padding:14px 12px 40px}
+#dots{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.08) 1.6px, transparent 2px);background-size:34px 34px;z-index:0}
+.wrap{position:relative;z-index:1;max-width:520px;margin:0 auto}
+h1{margin:0 0 4px;font-size:26px;color:var(--yellow);text-shadow:0 3px 0 var(--orange-d);text-align:center}
+.status{text-align:center;font-size:13px;color:rgba(255,255,255,.78);margin-bottom:12px}
+.status .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#888;margin-right:5px;vertical-align:middle}
+.status.ok .dot{background:var(--lime)}.status.err .dot{background:#ff3d57}
+.card{background:var(--cream);color:var(--purple);border:5px solid var(--orange);border-radius:22px;box-shadow:0 8px 0 var(--orange-d), inset 0 0 0 3px #fff;padding:12px 14px 14px;margin-bottom:14px}
+.card h2{margin:0 0 6px;font-size:15px;color:var(--orange-d)}
+.latest{display:flex;align-items:baseline;justify-content:center;gap:6px;font-family:var(--fontN);font-weight:700;font-size:124px;line-height:1;color:var(--purple)}
+.latest.flash{animation:pop .6s cubic-bezier(.2,1.5,.45,1)}
+@keyframes pop{0%{transform:scale(.3)}100%{transform:scale(1)}}
+.latest .ban{font-family:var(--fontJ);font-size:26px;color:var(--orange-d)}
+.latest.none{font-size:24px;font-family:var(--fontJ);padding:22px 0;color:var(--pink)}
+.meta{display:flex;justify-content:space-between;font-size:14px;color:#7a5c2e;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
+.c{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#fff;border:2px solid var(--cream-d);color:#c2b49b;font-family:var(--fontN);font-weight:700;font-size:16px}
+.c.hit{background:var(--orange);border-color:var(--orange-d);color:#fff;box-shadow:0 3px 0 var(--orange-d)}
+.c.latest{background:var(--yellow);border-color:var(--yellow-d);color:var(--purple);box-shadow:0 3px 0 var(--yellow-d);animation:blink .7s ease-in-out infinite alternate}
+@keyframes blink{from{transform:scale(1)}to{transform:scale(1.1)}}
+.order{display:flex;flex-wrap:wrap;gap:5px}
+.order span{background:#fff;border:2px solid var(--cream-d);border-radius:8px;padding:2px 8px;font-family:var(--fontN);font-weight:700;font-size:17px;color:var(--purple)}
+.order span.l{background:var(--yellow);border-color:var(--yellow-d)}
+.order span small{font-family:var(--fontJ);font-size:10px;color:#7a5c2e;margin-right:3px}
+.order .none{color:#999;border:0;background:none;font-family:var(--fontJ);font-size:14px}
+/* クイズ（司会の画面と同じものを出す） */
+#quizP{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:45;background:radial-gradient(circle at 50% 30%, #4c1d95 0, #2d0b57 55%, var(--bg) 100%);padding:20px 16px;text-align:center}
+#quizP.show{display:flex}
+.qp{background:var(--cream);color:var(--purple);border:5px solid var(--pink);border-radius:24px;box-shadow:0 8px 0 #b0206f, inset 0 0 0 3px #fff;padding:18px 16px 14px;width:100%;max-width:420px}
+.qp .qt{font-size:22px;color:#b0206f;margin-bottom:6px}
+.qp .qrow{font-size:38px;letter-spacing:2px;line-height:1.3;margin:8px 0;white-space:nowrap}
+.qp .qemo{font-size:100px;line-height:1.15}
+.qp .qja{font-size:28px;margin-top:2px}
+.qp .qask{font-size:18px;color:#7a5c2e;margin-top:8px}
+.qp .qen{font-family:var(--fontN);font-weight:700;font-size:58px;line-height:1.05;margin-top:10px;animation:pop .6s cubic-bezier(.2,1.5,.45,1)}
+.qp .qkana{font-size:26px;color:var(--orange-d);margin-top:2px}
+.qp .qnote{font-size:12px;color:#999;margin-top:14px}
+#congrats{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;z-index:50;background:radial-gradient(circle at 50% 40%, #7c3aed 0, #2d0b57 60%, var(--bg) 100%);text-align:center;padding:20px}
+#congrats.show{display:flex}
+#congrats .big{font-size:50px;color:var(--yellow);text-shadow:0 5px 0 var(--orange-d);animation:wobble 1s ease-in-out infinite alternate;line-height:1.2}
+#congrats .bingo{font-family:var(--fontN);font-weight:700;font-size:62px;color:#fff;text-shadow:0 5px 0 #b0206f;animation:wobble 1.1s ease-in-out infinite alternate-reverse}
+#congrats .emo{font-size:46px;animation:bounce .7s ease-in-out infinite alternate}
+@keyframes wobble{from{transform:rotate(-3deg) scale(1)}to{transform:rotate(3deg) scale(1.06)}}
+@keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-14px)}}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:60}
+.foot{text-align:center;font-size:12px;color:rgba(255,255,255,.55);margin-top:10px;line-height:1.6}
+#toast{position:fixed;left:50%;top:12px;transform:translateX(-50%);background:var(--purple);color:#fff;border:3px solid var(--yellow);border-radius:14px;padding:8px 14px;font-size:15px;z-index:70;display:none;white-space:nowrap}
+#toast.show{display:block}
+</style>
+</head>
+<body>
+<div id="dots"></div>
+<div class="wrap">
+  <h1>🎃 ハロウィン ビンゴ 👻</h1>
+  <div class="status" id="status"><span class="dot"></span><span id="statusT">つないでいます…</span></div>
+  <div class="card"><h2>いま出た番号</h2><div class="latest none" id="latest">まだ出ていません</div><div class="meta"><span id="metaL"></span><span id="metaR"></span></div></div>
+  <div class="card"><h2>出た番号（<span id="cnt">0</span>個）</h2><div class="grid" id="grid"></div></div>
+  <div class="card"><h2>出た順</h2><div class="order" id="order"><span class="none">まだありません</span></div></div>
+  <div class="foot">このページは自動で新しくなります。<br>動かないときは、ページを開き直してください。</div>
+</div>
+<div id="quizP"><div class="qp"><div class="qt">❓ えいごで なんて いう？</div><div class="qrow" id="qpRow"></div><div class="qemo" id="qpEmo"></div><div class="qja" id="qpJa"></div><div class="qask" id="qpAsk"></div><div class="qen" id="qpEn"></div><div class="qkana" id="qpKana"></div><div class="qnote">ビンゴは おやすみ中。クイズが おわると もどります</div></div></div>
+<div id="congrats"><div class="emo">🎃 👻 🍬</div><div class="big">おめでとう！！</div><div class="bingo">BINGO!!</div><div style="margin-top:10px;font-size:18px">ハッピーハロウィン 🎉</div></div>
+<canvas id="fx"></canvas>
+<div id="toast"></div>
+<script>window.MAM_API="https://script.google.com/macros/s/AKfycbzYqHsoDiI4taLJGWofMkVkDl0ZNhKQQTKwAI8WrLJ69EXaZi9JtKyC3O-xgvpyTpzuzg/exec";</script>
+<script>
+(function(){
+'use strict';
+const $=s=>document.querySelector(s);
+let cur={s:'',n:75,d:[],m:'play',v:0,t:0},first=true,lastSession=null,fails=0,timer=0,toastT=0;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2500);}
+function setStatus(cls,text){const s=$('#status');s.className='status '+cls;$('#statusT').textContent=text;}
+/* 状態の取り方：①Apps Script の中で開かれたとき＝google.script.run ②自分のサイト（takadanopapa.com など）に置いた静的版＝公開URLへ JSONP（script タグ。どのブラウザ・アプリ内ブラウザでも動く） ③どちらも無い＝見本データ */
+const API=window.MAM_API||'';const SLOT=(new URLSearchParams(location.search).get('t')==='test')?'&t=test':'';
+function jsonp(url,timeout){return new Promise((res,rej)=>{const cb='mamcb_'+Math.random().toString(36).slice(2);const s=document.createElement('script');let done=false;
+  const clean=()=>{try{delete window[cb];}catch(e){window[cb]=undefined;}s.remove();clearTimeout(t);};window[cb]=d=>{if(done)return;done=true;clean();res(d);};
+  const t=setTimeout(()=>{if(done)return;done=true;clean();rej(new Error('timeout'));},timeout||12000);s.onerror=()=>{if(done)return;done=true;clean();rej(new Error('load'));};
+  s.src=url+(url.indexOf('?')>=0?'&':'?')+'action=get'+SLOT+'&callback='+cb+'&_='+Date.now();document.head.appendChild(s);});}
+function fetchState(){return new Promise((res,rej)=>{
+  if(window.google&&google.script&&google.script.run){google.script.run.withSuccessHandler(r=>{try{res(JSON.parse(r));}catch(e){rej(e);}}).withFailureHandler(rej).getState();}
+  else if(API){jsonp(API).then(d=>{if(d&&typeof d==='object'&&'n' in d)res(d);else rej(new Error('bad'));}).catch(rej);}
+  else{const demo=window.MAM_DEMO||{s:'demo',n:75,d:[7,25,61,3,44,12,70,33,58,19,41,66],m:'play',v:12,t:Date.now()};setTimeout(()=>res(demo),200);}});}
+function render(st,isNew){const d=st.d||[],n=st.n||75,last=d[d.length-1];
+  const L=$('#latest');if(last){L.className='latest'+(isNew?' flash':'');L.innerHTML='<span>'+last+'</span><span class="ban">番</span>';$('#metaL').textContent=d.length+'個め';$('#metaR').textContent=d.length>1?'前の番号：'+d[d.length-2]:'';}
+  else{L.className='latest none';L.textContent='まだ出ていません';$('#metaL').textContent='';$('#metaR').textContent='';}
+  $('#cnt').textContent=d.length;const hit=new Set(d);const g=$('#grid');g.innerHTML='';
+  for(let i=1;i<=n;i++){const c=document.createElement('div');c.className='c'+(hit.has(i)?' hit':'')+(i===last?' latest':'');c.textContent=i;g.appendChild(c);}
+  const o=$('#order');o.innerHTML='';if(!d.length){const s=document.createElement('span');s.className='none';s.textContent='まだありません';o.appendChild(s);}
+  d.forEach((x,i)=>{const s=document.createElement('span');if(i===d.length-1)s.className='l';const sm=document.createElement('small');sm.textContent=(i+1)+'.';s.appendChild(sm);s.appendChild(document.createTextNode(x));o.appendChild(s);});
+  const c=$('#congrats');const showC=st.m==='congrats';if(showC&&!c.classList.contains('show')){c.classList.add('show');rain=true;runFx();}if(!showC){c.classList.remove('show');rain=false;}
+  renderQuiz(st.q||'');}
+/* クイズ：司会の画面と同じキャラクター・こたえを出す（q＝'' / open / q_pumpkin:1 / q_pumpkin:2） */
+const QUIZ={q_vampire:{e:'🧛',ja:'きゅうけつき',en:'Vampire',kana:'バンパイア'},q_pumpkin:{e:'🎃',ja:'かぼちゃ',en:'Pumpkin',kana:'パンプキン'},q_cat:{e:'🐈‍⬛',ja:'くろねこ',en:'Black cat',kana:'ブラック キャット'},q_ghost:{e:'👻',ja:'おばけ',en:'Ghost',kana:'ゴースト'},q_candy:{e:'🍬',ja:'あめ',en:'Candy',kana:'キャンディ'}};
+function renderQuiz(q){const box=$('#quizP');if(!q){box.classList.remove('show');return;}
+  const parts=String(q).split(':'),it=QUIZ[parts[0]],stg=parts[1];const show=(id,on)=>{$(id).style.display=on?'':'none';};
+  if(!it){$('#qpRow').textContent='🧛 🎃 🐈‍⬛ 👻 🍬';show('#qpRow',true);show('#qpEmo',false);show('#qpJa',false);$('#qpAsk').textContent='どれが でるかな？';show('#qpEn',false);show('#qpKana',false);}
+  else{show('#qpRow',false);$('#qpEmo').textContent=it.e;show('#qpEmo',true);$('#qpJa').textContent=it.ja;show('#qpJa',true);
+    if(stg==='2'){$('#qpAsk').textContent='えいごで いうと…';$('#qpEn').textContent=it.en;$('#qpKana').textContent=it.kana;show('#qpEn',true);show('#qpKana',true);}
+    else{$('#qpAsk').textContent='えいごで なんて いう？';show('#qpEn',false);show('#qpKana',false);}}
+  show('#qpAsk',true);box.classList.add('show');}
+function poll(){fetchState().then(st=>{fails=0;setStatus('ok','つながっています（自動で新しくなります）');
+    if(lastSession!==null&&st.s!==lastSession&&(st.d||[]).length===0)toast('新しいゲームが始まりました');lastSession=st.s;
+    const oldLast=cur.d&&cur.d[cur.d.length-1],newLast=(st.d||[])[(st.d||[]).length-1];
+    const changed=JSON.stringify(st.d)!==JSON.stringify(cur.d)||st.m!==cur.m||st.n!==cur.n||(st.q||'')!==(cur.q||'');const isNew=!first&&newLast&&newLast!==oldLast;
+    const qNew=!first&&(st.q||'')!==(cur.q||'')&&/:2$/.test(st.q||'');
+    cur=st;if(changed||first)render(st,isNew);if(isNew||qNew){try{navigator.vibrate&&navigator.vibrate(isNew?150:80);}catch(e){}}first=false;})
+  .catch(()=>{fails++;setStatus('err','つながりません… もう一度ためしています');}).then(schedule);}
+function schedule(){clearTimeout(timer);const ms=document.hidden?15000:Math.min(2500*Math.pow(1.6,Math.min(fails,4)),20000);timer=setTimeout(poll,ms);}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){clearTimeout(timer);poll();}});
+/* 紙ふぶき（おめでとうのとき） */
+const fx=$('#fx'),ctx=fx.getContext('2d');let parts=[],fxRunning=false,rain=false;
+function resize(){fx.width=innerWidth;fx.height=innerHeight;}addEventListener('resize',resize);resize();
+const COLORS=['#ff8a1f','#ffd23f','#a6ff5e','#ff6fb5','#5ed3ff','#fff7e8','#c084fc'],EMO=['🎃','👻','🍬','⭐','🦇','🍭'];
+function runFx(){if(fxRunning)return;fxRunning=true;const step=()=>{ctx.clearRect(0,0,fx.width,fx.height);
+  if(rain&&parts.length<120){for(let i=0;i<3;i++)parts.push({x:Math.random()*fx.width,y:-20,vx:(Math.random()-0.5)*1.2,vy:1.5+Math.random()*2.5,r:Math.random()*6,vr:(Math.random()-0.5)*0.2,s:8+Math.random()*10,c:COLORS[Math.floor(Math.random()*COLORS.length)],e:Math.random()<0.2?EMO[Math.floor(Math.random()*EMO.length)]:null});}
+  parts=parts.filter(p=>p.y<fx.height+40);for(const p of parts){p.vy+=0.08;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);
+    if(p.e){ctx.font=(p.s*1.7)+'px serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(p.e,0,0);}else{ctx.fillStyle=p.c;ctx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);}ctx.restore();}
+  if(parts.length||rain)requestAnimationFrame(step);else{fxRunning=false;ctx.clearRect(0,0,fx.width,fx.height);}};requestAnimationFrame(step);}
+poll();
+})();
+</script>
+</body>
+</html>
